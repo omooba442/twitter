@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Twitter Widget</title>
+<style>
+#twitter-widget-container {
+  width: 300px; /* Adjust as needed */
+  height: 500px; /* Adjust as needed */
+  border: 1px solid #ccc;
+  overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+</style>
+</head>
+<body>
+
+<div id="twitter-widget-container">
+  </div>
+
+<script>
+  function loadTwitterTimeline(twitterHandle, containerId, height) {
+    const container = document.getElementById(containerId);
+    if (!container) {
+      console.error(`Container with ID "${containerId}" not found.`);
+      return;
+    }
+
+    const iframe = document.createElement('iframe');
+    iframe.width = '100%';
+    iframe.height = height;
+    iframe.style.border = 'none';
+
+    const twitterUrl = `https://twitframe.com/show?url=https://twitter.com/${Adeyem10mooba}`;
+
+    iframe.src = twitterUrl;
+
+    container.appendChild(iframe);
+  }
+
+  // Replace 'YOUR_TWITTER_HANDLE' with your actual Twitter username
+  loadTwitterTimeline('YOUR_TWITTER_HANDLE', 'twitter-widget-container', '500px');
+</script>
+
+</body>
+</html>
